@@ -1,3 +1,9 @@
+:root {
+    --background: url(assets/casey-horner-RmoWqDCqN2E-unsplash.jpg);
+    --color-first: #072ac8;
+    --color-second: #ff220c;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -7,33 +13,42 @@
 .background {
     width: 100%;
     height: 100vh;
-    background: url(assets/casey-horner-RmoWqDCqN2E-unsplash.jpg) center;
+    background: var(--background) center;
     background-size: cover;
     animation: fadeIn 8s linear;
 }
 
 @keyframes fadeIn {
     0% {
-        filter: blur(20px);
+        filter: brightness(2) blur(40px);
     }
 
     10% {
-        filter: brightness(1) blur(10px);
+        filter: brightness(1) blur(20px);
     }
 }
 
-.container {
+.background .backContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    background: url(assets/casey-horner-RmoWqDCqN2E-unsplash.jpg) center;
     border-radius: 50%;
+}
+
+.background .background2 {
+    background: var(--background) center;
+    background-size: cover;
+    animation: scale 5s linear;
+}
+
+.background .background2 .container {
+    flex-direction: column;
+    background: var(--background) center;
     filter: opacity(0.5);
     background-size: cover;
-    animation: scale 10s linear;
+    animation: scale 8s linear 2s;
 }
 
 @keyframes scale {
@@ -44,8 +59,183 @@
     }
 }
 
+.background .background2 .container img {
+    width: 50vw;
+    animation: scale 10s linear;
+}
 
+.background .background2 .container .button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background: black;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 900;
+    transition: .5s;
+    margin: 40px;
+    border: none;
+    letter-spacing: 4px;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
+.background .background2 .container #buttonCharacters {
+    animation: scale, translateCharacters 15s linear;
+}
+
+.background .background2 .container #buttonMovies {
+    animation: scale, translateMovies 13s linear;
+}
+
+@keyframes translateCharacters {
+    0% {
+        translate: 0 0;
+    }
+    50%{
+        translate: 40px -30px;
+    }
+    100% {
+        translate: 0 0;
+    }
+}
+
+@keyframes translateMovies {
+    0% {
+        translate: 0 0;
+    }
+    50% {
+        translate: -40px -30px;
+    }
+    100% {
+        translate: 0 0;
+    }
+}
+
+.background .background2 #buttonCharacters:hover {
+    background-color: var(--color-first);
+    color: #000000;
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--color-first),
+                0 0 25px var(--color-first),
+                0 0 50px var(--color-first),
+                0 0 100px var(--color-first);
+}
+
+.background .background2 #buttonMovies:hover {
+    background-color: var(--color-second);
+    color: #000000;
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--color-second),
+                0 0 25px var(--color-second),
+                0 0 50px var(--color-second),
+                0 0 100px var(--color-second);
+}
+
+.background .background2 .button span {
+    position: absolute;
+    display: block;
+}
+
+.background .background2 .button span:nth-child(1) {
+    top: 0;
+    left: -50%;
+    width: 50%;
+    height: 4px;
+    animation: btn1 1s linear infinite;
+}
+
+.background .background2 #buttonCharacters span:nth-child(1) {
+    background: linear-gradient(90deg, transparent, var(--color-first));
+}
+
+.background .background2 #buttonMovies span:nth-child(1) {
+    background: linear-gradient(90deg, transparent, var(--color-second));
+}
+
+@keyframes btn1 {
+    0% {
+        left: -100%;
+    }
+    50%, 100% {
+        left: 100%;
+    }
+}
+
+.background .background2 .button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    animation: btn2 1s linear .25s infinite;
+}
+
+.background .background2 #buttonCharacters span:nth-child(2) {
+    background: linear-gradient(180deg, transparent, var(--color-first));
+}
+
+.background .background2 #buttonMovies span:nth-child(2) {
+    background: linear-gradient(180deg, transparent, var(--color-second));
+}
+
+@keyframes btn2 {
+    0% {
+        top: -100%;
+    }
+    50%, 100% {
+        top: 100%;
+    }
+}
+
+.background .background2 .button span:nth-child(3) {
+    bottom: 0;
+    right: -50%;
+    width: 50%;
+    height: 4px;
+    animation: btn3 1s linear .5s infinite;
+}
+
+.background .background2 #buttonCharacters span:nth-child(3) {
+    background: linear-gradient(270deg, transparent, var(--color-first));
+}
+
+.background .background2 #buttonMovies span:nth-child(3) {
+    background: linear-gradient(270deg, transparent, var(--color-second));
+}
+
+@keyframes btn3 {
+    0% {
+        right: -100%;
+    }
+    50%, 100% {
+        right: 100%;
+    }
+}
+
+.background .background2 .button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    animation: btn4 1s linear .75s infinite;
+}
+
+.background .background2 #buttonCharacters span:nth-child(4) {
+    background: linear-gradient(360deg, transparent, var(--color-first));
+}
+
+.background .background2 #buttonMovies span:nth-child(4) {
+    background: linear-gradient(360deg, transparent, var(--color-second));
+}
+
+@keyframes btn4 {
+    0% {
+        bottom: -100%;
+    }
+    50%, 100% {
+        bottom: 100%;
+    }
+}
 
 
 
