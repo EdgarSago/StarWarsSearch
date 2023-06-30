@@ -1,0 +1,161 @@
+:root {
+    --color-background: black;
+    --color-first: #072ac8;
+    --color-second: #ff220c;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-background);
+}
+
+/* CAROUSEL CHARACTERS.HTML & MOVIES.HTML*/
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 80%;
+    height: 30%;
+    border-radius: 5px 5px 10px 10px;
+    overflow: hidden;
+}
+
+.slider {
+    width: 500%;
+    height: 30%;
+    display: flex;
+}
+
+.slider input {
+    display: none;
+}
+
+.im {
+    width: 20%;
+    transition: 2s;
+}
+
+.im img {
+    width: 100%;
+    height: 350px;
+}
+
+.nav-r {
+    position: absolute;
+    width: 80%;
+    margin-top: -45px;
+    justify-content: center;
+    display: flex;
+}
+
+.r-btn {
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.r-btn:not(:last-child) {
+    margin-right: 30px;
+}
+
+#radio1:checked ~.first {
+    margin-left: 0;
+}
+
+#radio2:checked ~.first {
+    margin-left: -20%;
+}
+
+#radio3:checked ~.first {
+    margin-left: -40%;
+}
+
+#radio4:checked ~.first {
+    margin-left: -60%;
+}
+
+.nav-auto {
+    position: absolute;
+    width: 80%;
+    margin-top: 310px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-auto div {
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.nav-auto div:not(:last-child) {
+    margin-right: 30px;
+    justify-content: center;
+}
+
+/* CAROUSEL CHARACTERS.HTML*/
+.nav-r .ch-b {
+    border: 2px solid var(--color-first);
+}
+
+.nav-r .ch-b:hover {
+    background-color: var(--color-first);
+}
+
+.nav-auto .charactBorder {
+    border: 2px solid var(--color-first);
+}
+
+#radio1:checked ~ .nav-auto .r-ch1 {
+    background-color: var(--color-first);
+}
+
+#radio2:checked ~ .nav-auto .r-ch2 {
+    background-color: var(--color-first);
+}
+
+#radio3:checked ~ .nav-auto .r-ch3 {
+    background-color: var(--color-first);
+}
+
+#radio4:checked ~ .nav-auto .r-ch4 {
+    background-color: var(--color-first);
+}
+
+/* CAROUSEL MOVIES.HTML*/
+.nav-r .m-b {
+    border: 2px solid var(--color-second);
+}
+
+.nav-r .m-b:hover {
+    background-color: var(--color-second);
+}
+
+.nav-auto .moviesBorder {
+    border: 2px solid var(--color-second);
+}
+
+#radio1:checked ~ .nav-auto .r-m1 {
+    background-color: var(--color-second);
+}
+
+#radio2:checked ~ .nav-auto .r-m2 {
+    background-color: var(--color-second);
+}
+
+#radio3:checked ~ .nav-auto .r-m3 {
+    background-color: var(--color-second);
+}
+
+#radio4:checked ~ .nav-auto .r-m4 {
+    background-color: var(--color-second);
+}
