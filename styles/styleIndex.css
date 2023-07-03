@@ -1,5 +1,5 @@
 :root {
-    --background: url(assets/background.jpg);
+    --background: url(/assets/background.jpg);
     --color-first: #072ac8;
     --color-second: #ff220c;
 }
@@ -43,7 +43,7 @@
     animation: scale 5s linear;
 }
 
-.background .background2 .container {
+.container {
     flex-direction: column;
     background: var(--background) center;
     filter: opacity(0.5);
@@ -59,12 +59,12 @@
     }
 }
 
-.background .background2 .container img {
+.container img {
     width: 50vw;
     animation: scale 10s linear;
 }
 
-.background .background2 .container .button {
+.container .button {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
@@ -80,11 +80,11 @@
     cursor: pointer;
 }
 
-.background .background2 .container #buttonCharacters {
+.container #buttonCharacters {
     animation: scale, translateCharacters 15s linear;
 }
 
-.background .background2 .container #buttonMovies {
+.container #buttonMovies {
     animation: scale, translateMovies 13s linear;
 }
 
@@ -112,7 +112,7 @@
     }
 }
 
-.background .background2 #buttonCharacters:hover {
+#buttonCharacters:hover {
     background-color: var(--color-first);
     color: #000000;
     border-radius: 5px;
@@ -122,7 +122,7 @@
                 0 0 100px var(--color-first);
 }
 
-.background .background2 #buttonMovies:hover {
+#buttonMovies:hover {
     background-color: var(--color-second);
     color: #000000;
     border-radius: 5px;
@@ -132,12 +132,12 @@
                 0 0 100px var(--color-second);
 }
 
-.background .background2 .button span {
+.button span {
     position: absolute;
     display: block;
 }
 
-.background .background2 .button span:nth-child(1) {
+.button span:nth-child(1) {
     top: 0;
     left: -50%;
     width: 50%;
@@ -145,11 +145,11 @@
     animation: btn1 1s linear infinite;
 }
 
-.background .background2 #buttonCharacters span:nth-child(1) {
+#buttonCharacters span:nth-child(1) {
     background: linear-gradient(90deg, transparent, var(--color-first));
 }
 
-.background .background2 #buttonMovies span:nth-child(1) {
+#buttonMovies span:nth-child(1) {
     background: linear-gradient(90deg, transparent, var(--color-second));
 }
 
@@ -162,7 +162,7 @@
     }
 }
 
-.background .background2 .button span:nth-child(2) {
+.button span:nth-child(2) {
     top: -100%;
     right: 0;
     width: 4px;
@@ -170,11 +170,11 @@
     animation: btn2 1s linear .25s infinite;
 }
 
-.background .background2 #buttonCharacters span:nth-child(2) {
+#buttonCharacters span:nth-child(2) {
     background: linear-gradient(180deg, transparent, var(--color-first));
 }
 
-.background .background2 #buttonMovies span:nth-child(2) {
+#buttonMovies span:nth-child(2) {
     background: linear-gradient(180deg, transparent, var(--color-second));
 }
 
@@ -187,7 +187,7 @@
     }
 }
 
-.background .background2 .button span:nth-child(3) {
+.button span:nth-child(3) {
     bottom: 0;
     right: -50%;
     width: 50%;
@@ -195,11 +195,11 @@
     animation: btn3 1s linear .5s infinite;
 }
 
-.background .background2 #buttonCharacters span:nth-child(3) {
+#buttonCharacters span:nth-child(3) {
     background: linear-gradient(270deg, transparent, var(--color-first));
 }
 
-.background .background2 #buttonMovies span:nth-child(3) {
+#buttonMovies span:nth-child(3) {
     background: linear-gradient(270deg, transparent, var(--color-second));
 }
 
@@ -212,7 +212,7 @@
     }
 }
 
-.background .background2 .button span:nth-child(4) {
+.button span:nth-child(4) {
     bottom: -100%;
     left: 0;
     width: 4px;
@@ -220,11 +220,11 @@
     animation: btn4 1s linear .75s infinite;
 }
 
-.background .background2 #buttonCharacters span:nth-child(4) {
+#buttonCharacters span:nth-child(4) {
     background: linear-gradient(360deg, transparent, var(--color-first));
 }
 
-.background .background2 #buttonMovies span:nth-child(4) {
+#buttonMovies span:nth-child(4) {
     background: linear-gradient(360deg, transparent, var(--color-second));
 }
 
