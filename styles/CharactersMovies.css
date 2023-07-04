@@ -1,7 +1,8 @@
 :root {
-    --color-background: black;
+    --color-background: #03071e;
     --color-first: #072ac8;
     --color-second: #ff220c;
+    --color-third: #ffd60a;
 }
 
 *{
@@ -12,6 +13,58 @@
 
 body {
     background-color: var(--color-background);
+    margin: 10px;
+}
+
+/* NAV CHARACTERS.HTML & MOVIES.HTML*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+}
+
+nav img {
+    max-width: 100px;
+}
+
+.spanImg span {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--color-third);
+}
+
+.return button {
+    margin: 10px 10px;
+}
+
+.buttonReturn:hover {
+    background-color: var(--color-third);
+    color: var(--color-background);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--color-third),
+                0 0 25px var(--color-third),
+                0 0 50px var(--color-third),
+                0 0 100px var(--color-third);
+}
+
+/* BUTTON CHARACTERS.HTML & MOVIES.HTML 
+CON STYLEINDEX.CSS*/
+.button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--color-background);
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    transition: .5s;
+    letter-spacing: 0.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    border: none;
 }
 
 /* CAROUSEL CHARACTERS.HTML & MOVIES.HTML*/
@@ -159,3 +212,74 @@ header {
 #radio4:checked ~ .nav-auto .r-m4 {
     background-color: var(--color-second);
 }
+
+/* MAIN CHARACTERS.HTML & MOVIES.HTML */
+main section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+.inputBox {
+    position: relative;
+    width: 250px;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: var(--color-background);
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+.inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.25);
+    transition: 0.5s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.75em;
+    padding: 0 10px;
+    background: var(--color-background);
+    letter-spacing: 0.2em;
+    font-weight: bold;
+}
+
+/* MAIN CHARACTERS.HTML */
+.inputBox input:valid ~ .spanCharacters,
+.inputBox input:focus ~ .spanCharacters {
+    color: var(--color-first);
+    border-left: 1px solid var(--color-first);
+    border-right: 1px solid var(--color-first);
+}
+
+.inputBox .inputCharacters:valid,
+.inputBox .inputCharacters:focus {
+    border: 1px solid var(--color-first);
+}
+
+/* MAIN MOVIES.HTML */
+.inputBox input:valid ~ .spanMovies,
+.inputBox input:focus ~ .spanMovies {
+    color: var(--color-second);
+    border-left: 1px solid var(--color-second);
+    border-right: 1px solid var(--color-second);
+}
+
+.inputBox .inputMovies:valid,
+.inputBox .inputMovies:focus {
+    border: 1px solid var(--color-second);
+}
+
