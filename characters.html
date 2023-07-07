@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/CharactersMovies.css">
     <script type="module" src="js/characters.js"></script>
+    <script src="js/swapi.js"></script>
     <title>Characters</title>
 </head>
 <body>
@@ -15,7 +16,7 @@
             <span>CHARACTERS</span>
         </div>
         <div class="return">
-            <button class="button buttonMovies" id="buttonGoMovies">Go to Movies <span></span> <span></span> <span></span> <span></span></button>
+            <button class="button buttonMovies" id="buttonGoMovies">Movies <span></span> <span></span> <span></span> <span></span></button>
             <button class="button buttonReturn" id="buttonReturn">Return</button>
         </div>
     </nav>
@@ -54,7 +55,7 @@
         </div>
     </header>
     <main>
-        <section>
+        <section class="inputButton">
             <div class="inputBox">
                 <input class="inputCharacters" type="text" required="required">
                 <span class="spanCharacters">Star Wars Characters</span>
@@ -62,6 +63,9 @@
             <div class="mainButton">
                 <button class="button buttonCharacters" id="searchCharacters">Search <span></span> <span></span> <span></span> <span></span></button>
             </div>
+        </section>
+        <section class="card">
+            
         </section>
     </main>
 </body>
