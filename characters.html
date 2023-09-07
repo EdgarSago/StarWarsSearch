@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/CharactersMovies.css">
-    <script type="module" src="js/characters.js"></script>
-    <script src="js/swapi.js"></script>
-    <title>Characters</title>
+    <link rel="shortcut icon" href="assets/star-wars-logo.png" type="image/x-icon">
+    <title>Star Wars Characters</title>
 </head>
+
 <body>
     <nav>
         <div class="spanImg">
-            <img src="assets/star-wars-logo.png" alt="Star Wars Logo">
-            <span>CHARACTERS</span>
+            <img src="./assets/star-wars-logo.png" alt="Star Wars Logo">
+            <h1>STAR WARS</h1>
+            <p>CHARACTERS</p>
         </div>
         <div class="return">
-            <button class="button buttonMovies" id="buttonGoMovies">Movies <span></span> <span></span> <span></span> <span></span></button>
-            <button class="button buttonReturn" id="buttonReturn">Return</button>
+            <button class="button buttonMovies">Go to Movies <span></span> <span></span> <span></span>
+                <span></span></button>
+            <button class="button buttonReturn">Return to Index</button>
         </div>
     </nav>
     <header>
@@ -61,12 +64,20 @@
                 <span class="spanCharacters">Star Wars Characters</span>
             </div>
             <div class="mainButton">
-                <button class="button buttonCharacters" id="searchCharacters">Search <span></span> <span></span> <span></span> <span></span></button>
+                <button class="button buttonCharacters">Search <span></span> <span></span> <span></span>
+                    <span></span></button>
             </div>
         </section>
         <section class="card">
-            
+
+        </section>
+        <section class="lightbox">
+
         </section>
     </main>
+
+    <script src="./js/swapi.js"></script>
+    <script src="./js/characters.js"></script>
 </body>
+
 </html>
