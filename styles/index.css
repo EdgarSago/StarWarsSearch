@@ -4,109 +4,131 @@
     --color-second: #ff220c;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: cursive, sans-serif;
 }
 
 .background {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background: var(--background) center;
     background-size: cover;
+}
+
+.background1 {
     animation: fadeIn 8s linear;
+    overflow: hidden;
 }
 
 @keyframes fadeIn {
     0% {
-        filter: brightness(2) blur(40px);
+        filter: brightness(0%) blur(40px);
     }
 
     10% {
-        filter: brightness(1) blur(20px);
+        filter: brightness(50%) blur(20px);
     }
 }
 
-.background .backContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+.background2 {
     border-radius: 50%;
-}
-
-.background .background2 {
-    background: var(--background) center;
-    background-size: cover;
     animation: scale 5s linear;
 }
 
-.background2 .container {
-    flex-direction: column;
-    background: var(--background) center;
-    filter: opacity(0.5);
-    background-size: cover;
+.background3 {
+    border-radius: 50%;
+    opacity: .7;
     animation: scale 8s linear 2s;
+    display: flex;
+    justify-content: center;
 }
 
 @keyframes scale {
     from {
         transform: scale(0);
-    } to {
+    }
+
+    to {
         transform: scale(1);
     }
 }
 
-.background2 .container img {
-    width: 50vw;
-    animation: scale 10s linear;
+.containerButton {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    animation: scale2 10s linear;
 }
 
-.container .button {
+@keyframes scale2 {
+    from {
+        transform: scale(0);
+        filter: opacity(0);
+    }
+
+    to {
+        transform: scale(1);
+        filter: opacity(1);
+    }
+}
+
+.containerButton img {
+    width: 25rem;
+    animation: translateImg 10s linear;
+}
+
+@keyframes translateImg {
+    0% {
+        translate: 500px 0;
+    }
+
+    100% {
+        translate: 0 0;
+    }
+}
+
+.containerButton .button {
     position: relative;
-    display: inline-block;
     padding: 10px 20px;
     background: black;
     color: #fff;
-    font-size: 26px;
+    font-size: 1rem;
     font-weight: 900;
     transition: .5s;
-    margin: 40px;
+    margin: 25px;
     border: none;
     letter-spacing: 4px;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.container .buttonCharacters {
-    animation: scale, translateCharacters 15s linear;
-}
-
-.container .buttonMovies {
-    animation: scale, translateMovies 13s linear;
+.containerButton .buttonCharacters {
+    animation: translateCharacters 10s linear;
 }
 
 @keyframes translateCharacters {
     0% {
-        translate: 0 0;
+        translate: -250px 0;
     }
-    50%{
-        translate: 40px -30px;
-    }
+
     100% {
         translate: 0 0;
     }
 }
 
-@keyframes translateMovies {
+.containerButton .buttonFilms {
+    animation: translateFilms 10s linear;
+}
+
+@keyframes translateFilms {
     0% {
-        translate: 0 0;
+        translate: -500px 0;
     }
-    50% {
-        translate: -40px -30px;
-    }
+
     100% {
         translate: 0 0;
     }
@@ -117,19 +139,19 @@
     color: #000000;
     border-radius: 5px;
     box-shadow: 0 0 5px var(--color-first),
-                0 0 25px var(--color-first),
-                0 0 50px var(--color-first),
-                0 0 100px var(--color-first);
+        0 0 25px var(--color-first),
+        0 0 50px var(--color-first),
+        0 0 100px var(--color-first);
 }
 
-.buttonMovies:hover {
+.buttonFilms:hover {
     background-color: var(--color-second);
     color: #000000;
     border-radius: 5px;
     box-shadow: 0 0 5px var(--color-second),
-                0 0 25px var(--color-second),
-                0 0 50px var(--color-second),
-                0 0 100px var(--color-second);
+        0 0 25px var(--color-second),
+        0 0 50px var(--color-second),
+        0 0 100px var(--color-second);
 }
 
 .button span {
@@ -149,7 +171,7 @@
     background: linear-gradient(90deg, transparent, var(--color-first));
 }
 
-.buttonMovies span:nth-child(1) {
+.buttonFilms span:nth-child(1) {
     background: linear-gradient(90deg, transparent, var(--color-second));
 }
 
@@ -157,7 +179,9 @@
     0% {
         left: -100%;
     }
-    50%, 100% {
+
+    50%,
+    100% {
         left: 100%;
     }
 }
@@ -174,7 +198,7 @@
     background: linear-gradient(180deg, transparent, var(--color-first));
 }
 
-.buttonMovies span:nth-child(2) {
+.buttonFilms span:nth-child(2) {
     background: linear-gradient(180deg, transparent, var(--color-second));
 }
 
@@ -182,7 +206,9 @@
     0% {
         top: -100%;
     }
-    50%, 100% {
+
+    50%,
+    100% {
         top: 100%;
     }
 }
@@ -199,7 +225,7 @@
     background: linear-gradient(270deg, transparent, var(--color-first));
 }
 
-.buttonMovies span:nth-child(3) {
+.buttonFilms span:nth-child(3) {
     background: linear-gradient(270deg, transparent, var(--color-second));
 }
 
@@ -207,7 +233,9 @@
     0% {
         right: -100%;
     }
-    50%, 100% {
+
+    50%,
+    100% {
         right: 100%;
     }
 }
@@ -224,7 +252,7 @@
     background: linear-gradient(360deg, transparent, var(--color-first));
 }
 
-.buttonMovies span:nth-child(4) {
+.buttonFilms span:nth-child(4) {
     background: linear-gradient(360deg, transparent, var(--color-second));
 }
 
@@ -232,7 +260,41 @@
     0% {
         bottom: -100%;
     }
-    50%, 100% {
+
+    50%,
+    100% {
         bottom: 100%;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    @keyframes translateImg {
+        0% {
+            translate: 0 300px;
+        }
+
+        100% {
+            translate: 0 0;
+        }
+    }
+
+    @keyframes translateCharacters {
+        0% {
+            translate: 200px -375px;
+        }
+
+        100% {
+            translate: 0 0;
+        }
+    }
+
+    @keyframes translateFilms {
+        0% {
+            translate: -200px -375px;
+        }
+
+        100% {
+            translate: 0 0;
+        }
     }
 }

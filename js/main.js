@@ -1,10 +1,10 @@
 const buttonCharacters = document.getElementById('buttonCharacters');
-const buttonMovies = document.getElementById('buttonMovies');
+const buttonFilms = document.getElementById('buttonFilms');
 
-buttonCharacters.addEventListener('click', () => {
+buttonCharacters.addEventListener('pointerdown', () => {
     window.location.href = 'characters.html';
 })
 
-buttonMovies.addEventListener('click', () => {
-    window.location.href = 'movies.html';
+buttonFilms.addEventListener('pointerdown', () => {
+    window.location.href = 'films.html';
 })
