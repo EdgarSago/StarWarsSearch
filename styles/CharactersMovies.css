@@ -16,7 +16,7 @@ body {
     margin: 10px;
 }
 
-/* NAV CHARACTERS.HTML & MOVIES.HTML*/
+/*  ***** NAV *****  */
 nav {
     display: flex;
     justify-content: space-between;
@@ -50,11 +50,9 @@ nav .spanImg h1 {
         0 0 100px var(--color-third);
 }
 
-/* BUTTON CHARACTERS.HTML & MOVIES.HTML 
-CON STYLEINDEX.CSS*/
+/* BUTTON CON STYLE INDEX.CSS */
 .button {
     position: relative;
-    display: inline-block;
     padding: 10px 20px;
     background: var(--color-background);
     color: #fff;
@@ -68,23 +66,22 @@ CON STYLEINDEX.CSS*/
     border: none;
 }
 
-/* CAROUSEL CHARACTERS.HTML & MOVIES.HTML*/
+/*  ***** HEADER *****  */
+/* CAROUSEL */
 header {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.container {
+.containerCarousel {
     width: 80%;
-    height: 30%;
     border-radius: 5px 5px 10px 10px;
     overflow: hidden;
 }
 
 .slider {
     width: 500%;
-    height: 30%;
     display: flex;
 }
 
@@ -99,7 +96,7 @@ header {
 
 .im img {
     width: 100%;
-    height: 350px;
+    height: 250px;
 }
 
 .nav-r {
@@ -140,7 +137,7 @@ header {
 .nav-auto {
     position: absolute;
     width: 80%;
-    margin-top: 310px;
+    margin-top: 210px;
     display: flex;
     justify-content: center;
 }
@@ -156,65 +153,36 @@ header {
     justify-content: center;
 }
 
-/* CAROUSEL CHARACTERS.HTML*/
-.nav-r .ch-b {
-    border: 2px solid var(--color-first);
+.nav-r .chm-b {
+    border: 2px solid var(--color-third);
 }
 
-.nav-r .ch-b:hover {
-    background-color: var(--color-first);
+.nav-r .chm-b:hover {
+    background-color: var(--color-third);
 }
 
-.nav-auto .charactBorder {
-    border: 2px solid var(--color-first);
+.nav-auto .border {
+    border: 2px solid var(--color-third);
 }
 
-#radio1:checked~.nav-auto .r-ch1 {
-    background-color: var(--color-first);
+#radio1:checked~.nav-auto .r-1 {
+    background-color: var(--color-third);
 }
 
-#radio2:checked~.nav-auto .r-ch2 {
-    background-color: var(--color-first);
+#radio2:checked~.nav-auto .r-2 {
+    background-color: var(--color-third);
 }
 
-#radio3:checked~.nav-auto .r-ch3 {
-    background-color: var(--color-first);
+#radio3:checked~.nav-auto .r-3 {
+    background-color: var(--color-third);
 }
 
-#radio4:checked~.nav-auto .r-ch4 {
-    background-color: var(--color-first);
+#radio4:checked~.nav-auto .r-4 {
+    background-color: var(--color-third);
 }
 
-/* CAROUSEL MOVIES.HTML*/
-.nav-r .m-b {
-    border: 2px solid var(--color-second);
-}
-
-.nav-r .m-b:hover {
-    background-color: var(--color-second);
-}
-
-.nav-auto .moviesBorder {
-    border: 2px solid var(--color-second);
-}
-
-#radio1:checked~.nav-auto .r-m1 {
-    background-color: var(--color-second);
-}
-
-#radio2:checked~.nav-auto .r-m2 {
-    background-color: var(--color-second);
-}
-
-#radio3:checked~.nav-auto .r-m3 {
-    background-color: var(--color-second);
-}
-
-#radio4:checked~.nav-auto .r-m4 {
-    background-color: var(--color-second);
-}
-
-/* MAIN INPUT-BUTTON CHARACTERS.HTML & MOVIES.HTML */
+/*  ***** MAIN *****  */
+/* INPUT-BUTTON */
 main .inputButton {
     display: flex;
     justify-content: center;
@@ -259,33 +227,19 @@ main .inputButton {
     font-weight: bold;
 }
 
-/* MAIN INPUT CHARACTERS.HTML */
-.inputBox input:valid~.spanCharacters,
-.inputBox input:focus~.spanCharacters {
-    color: var(--color-first);
-    border-left: 1px solid var(--color-first);
-    border-right: 1px solid var(--color-first);
+.inputBox input:valid~.spanStarWars,
+.inputBox input:focus~.spanStarWars {
+    color: var(--color-third);
+    border-left: 1px solid var(--color-third);
+    border-right: 1px solid var(--color-third);
 }
 
-.inputBox .inputCharacters:valid,
-.inputBox .inputCharacters:focus {
-    border: 1px solid var(--color-first);
+.inputBox .inputStarWars:valid,
+.inputBox .inputStarWars:focus {
+    border: 1px solid var(--color-third);
 }
 
-/* MAIN INPUT MOVIES.HTML */
-.inputBox input:valid~.spanMovies,
-.inputBox input:focus~.spanMovies {
-    color: var(--color-second);
-    border-left: 1px solid var(--color-second);
-    border-right: 1px solid var(--color-second);
-}
-
-.inputBox .inputMovies:valid,
-.inputBox .inputMovies:focus {
-    border: 1px solid var(--color-second);
-}
-
-/* MAIN CARD CHARACTERS.HTML */
+/* CARD */
 .card {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -338,7 +292,7 @@ main .inputButton {
     clip-path: circle(150% at top right);
 }
 
-/* LIGHTBOX CHARACTERS.HTML */
+/* LIGHTBOX */
 .lightbox {
     position: fixed;
     width: 100%;
@@ -400,7 +354,7 @@ main .inputButton {
 
 .lightboxContainer .images {
     width: 80%;
-    margin: 40px auto;
+    margin: 40px auto 0;
     position: absolute;
     transition: all .3s ease;
 }
@@ -468,24 +422,40 @@ main .inputButton {
     display: flex;
     flex-direction: column;
     bottom: 0;
-    margin-bottom: 10px;
+    text-align: center;
+    padding: 0 15px 10px;
+    color: #fff;
 }
 
 .infoContainer h2 {
-    display: flex;
-    margin: 10px auto;
     font-weight: 900;
-    text-align: center;
+    color: var(--color-third);
+}
+
+.infoContainer p span {
     color: var(--color-third);
 }
 
 .infoContainer .text {
-    margin: auto;
-    text-align: center;
-    color: #fff;
-    font-weight: 500;
+    line-height: 1em;
 }
 
-.infoContainer .text span {
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    color: #fff;
+    border-top-left-radius: 5px;
+    background-color: var(--color-background);
+    padding: 5px;
+}
+
+footer div h4 {
     color: var(--color-third);
+}
+
+footer div a {
+    margin: 10px;
+    text-decoration: none;
 }
