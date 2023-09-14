@@ -1,7 +1,10 @@
 :root {
     --background: url(/assets/background.jpg);
+    --color-background: #03071e;
     --color-first: #072ac8;
     --color-second: #ff220c;
+    --color-third: #ffd60a;
+    --color-text: #fff;
 }
 
 * {
@@ -9,6 +12,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: cursive, sans-serif;
+    color: var(--color-text);
 }
 
 .background {
@@ -95,7 +99,6 @@
     position: relative;
     padding: 10px 20px;
     background: black;
-    color: #fff;
     font-size: 1rem;
     font-weight: 900;
     transition: .5s;
