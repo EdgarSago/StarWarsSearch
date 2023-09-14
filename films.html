@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/CharactersMovies.css">
+    <link rel="shortcut icon" href="./assets/star-wars-logo.png" type="image/x-icon">
+    <title>Star Wars Films</title>
+</head>
+
+<body>
+    <audio src="./assets/sable-laser.mp3" autoplay></audio>
+
+    <nav>
+        <div class="spanImg">
+            <img src="./assets/star-wars-logo.png" alt="Star Wars Logo">
+            <h1>STAR WARS</h1>
+            <p>Films</p>
+        </div>
+        <div class="return">
+            <button class="button buttonReturn" id="buttonReturn">Homepage</button>
+            <button class="button buttonCharacters" id="buttonGoCharacters">
+                Star Wars Characters<span></span> <span></span> <span></span> <span></span></button>
+        </div>
+    </nav>
+
+    <header>
+        <div class="containerCarousel">
+            <div class="slider">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <div class="im first">
+                    <img src="./assets/carousel/star-wars-Films-1.jpg" alt="Star Wars Logo">
+                </div>
+                <div class="im">
+                    <img src="./assets/carousel/star-wars-Films-2.jpg" alt="Star Wars Naves">
+                </div>
+                <div class="im">
+                    <img src="./assets/carousel/star-wars-Films-3.jpg" alt="Stormtroopers">
+                </div>
+                <div class="im">
+                    <img src="./assets/carousel/star-wars-Films-4.jpg" alt="Star Wars Naves Atacando">
+                </div>
+                <div class="nav-auto">
+                    <div class="border r-1"></div>
+                    <div class="border r-2"></div>
+                    <div class="border r-3"></div>
+                    <div class="border r-4"></div>
+                </div>
+            </div>
+            <div class="nav-r">
+                <label for="radio1" class="r-btn chm-b"></label>
+                <label for="radio2" class="r-btn chm-b"></label>
+                <label for="radio3" class="r-btn chm-b"></label>
+                <label for="radio4" class="r-btn chm-b"></label>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="inputButton">
+            <div class="inputBox">
+                <input class="inputStarWars" type="text" required="required">
+                <span class="spanStarWars">Star Wars Films</span>
+            </div>
+            <div class="mainButton">
+                <button class="button buttonFilms" id="searchFilms">
+                    Search<span></span> <span></span> <span></span> <span></span></button>
+            </div>
+        </section>
+
+        <section class="card"></section>
+
+        <section class="lightbox"></section>
+    </main>
+
+    <footer class="footer">
+
+    </footer>
+
+    <script src="./js/images.js"></script>
+    <script src="./js/films.js"></script>
+</body>
+
+</html>

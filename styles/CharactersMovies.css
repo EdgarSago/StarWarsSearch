@@ -449,6 +449,8 @@ footer {
     border-top-left-radius: 5px;
     background-color: var(--color-background);
     padding: 5px;
+    box-shadow: 0 0 5px var(--color-third),
+        0 0 25px var(--color-third)
 }
 
 footer div h4 {
