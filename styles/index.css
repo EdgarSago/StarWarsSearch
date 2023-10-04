@@ -1,5 +1,4 @@
 :root {
-    --background: url(/assets/background.jpg);
     --color-background: #03071e;
     --color-first: #072ac8;
     --color-second: #ff220c;
@@ -18,45 +17,20 @@
 .background {
     width: 100vw;
     height: 100vh;
-    background: var(--background) center;
+    background: url(/assets/background.jpg) center;
     background-size: cover;
-}
-
-.background1 {
+    display: flex;
+    justify-content: center;
     animation: fadeIn 8s linear;
-    overflow: hidden;
 }
 
 @keyframes fadeIn {
     0% {
-        filter: brightness(0%) blur(40px);
+        filter: brightness(0%) blur(30px);
     }
 
     10% {
-        filter: brightness(50%) blur(20px);
-    }
-}
-
-.background2 {
-    border-radius: 50%;
-    animation: scale 5s linear;
-}
-
-.background3 {
-    border-radius: 50%;
-    opacity: .7;
-    animation: scale 8s linear 2s;
-    display: flex;
-    justify-content: center;
-}
-
-@keyframes scale {
-    from {
-        transform: scale(0);
-    }
-
-    to {
-        transform: scale(1);
+        filter: brightness(30%) blur(15px);
     }
 }
 
