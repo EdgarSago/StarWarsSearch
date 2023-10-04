@@ -17,10 +17,21 @@
 .background {
     width: 100vw;
     height: 100vh;
-    background: url(/assets/background.jpg) center;
+    background: url(../assets/background.jpg) center;
     background-size: cover;
     display: flex;
     justify-content: center;
+    animation: fadeIn 8s linear;
+}
+
+@keyframes fadeIn {
+    0% {
+        filter: brightness(0%) blur(30px);
+    }
+
+    10% {
+        filter: brightness(30%) blur(15px);
+    }
 }
 
 .containerButton {
